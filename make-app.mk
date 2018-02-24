@@ -12,3 +12,7 @@ app-bash:
 app-setup:
 	docker-compose build
 	docker-compose run --user=$(USER) app bin/setup
+
+
+development-setup-env:
+	ansible-playbook ansible/development.yml -i ansible/development -vv
