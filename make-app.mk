@@ -10,5 +10,5 @@ app-bash:
 	docker-compose run --user=$(USER) app bash
 
 app-setup:
-	app-build
+	docker-compose build
 	docker-compose run --user=$(USER) app bin/setup
