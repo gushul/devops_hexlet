@@ -21,4 +21,4 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_USER: app
+      POSTGRES_USER: "${DB_USERNAME}"
