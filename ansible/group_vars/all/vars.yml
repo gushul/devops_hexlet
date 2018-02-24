@@ -1,1 +1,1 @@
-app_port: 8080
+rails_log_to_stdout: true
