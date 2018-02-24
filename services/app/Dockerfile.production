@@ -6,6 +6,13 @@ RUN apt-get install -y nodejs
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+COPY Gemfile .
+COPY Gemfile.lock .
+ENV BUNDLE_PATH $PROJECT_ROOT/vendor/bundle
+ENV GEM_HOME $PROJECT_ROOT/vendor/bundle
+ENV BUNDLE_JOBS 2
+
+
 COPY . .
 
 
