@@ -1,4 +1,4 @@
-version: '3.3'
+version: '2'
 
 services:
   db:
@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    command: rake test
+    command: make test
     environment:
       - RAILS_MASTER_KEY
     depends_on:
